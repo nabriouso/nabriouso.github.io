@@ -1,12 +1,12 @@
 @import url("https://fontlibrary.org/face/minecraftia");
-@import url("/assets/css/foundation.css");
+@import url("/bta/assets/css/foundation.css");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: url("/assets/img/dirt.png") repeat;
+  background: url("/bta/assets/img/dirt.png") repeat;
   color: #acacac;
   text-shadow: 2px 2px 0 rgb(0, 0, 0, 0.38);
   font-family: "Minecraftia", sans-serif;
@@ -21,7 +21,7 @@ body {
   position: absolute;
   inset: 0;
   content: "";
-  background: url("/assets/img/cover.png");
+  background: url("/bta/assets/img/cover.png");
   background-size: cover;
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 100%);
   z-index: -1;
