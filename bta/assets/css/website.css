@@ -16,6 +16,10 @@ body {
   width: 100%;
   padding: 0 10px;
 }
+.navigation-buttons {
+  max-width: 480px;
+  margin: 0 auto;
+}
 
 .cover::before {
   position: absolute;
@@ -23,6 +27,11 @@ body {
   content: "";
   background: url("/bta/assets/img/cover.png");
   background-size: cover;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 50%,
+    transparent 100%
+  );
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 50%, transparent 100%);
   z-index: -1;
 }
@@ -180,7 +189,8 @@ a {
 }
 
 .px-0 {
-  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .d-flex {
