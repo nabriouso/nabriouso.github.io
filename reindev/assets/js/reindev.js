@@ -28,7 +28,7 @@ document.querySelectorAll(".collapsible").forEach(function (element) {
   });
 });
 
-const audio = new Audio("/assets/audio/click.mp3");
+const audio = new Audio("/reindev/assets/audio/click.mp3");
 const buttons = document.querySelectorAll("[data-play-sound]");
 
 buttons.forEach((button) => {
