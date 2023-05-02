@@ -127,6 +127,7 @@ details[open] > summary::after {
   border-left: 2px solid #f6f6f6;
   border-bottom: 2px solid #4c4c4c;
   border-right: 2px solid #4c4c4c;
+
   font-weight: 500;
 
   text-decoration: none;
@@ -164,6 +165,9 @@ details[open] > summary::after {
   display: inline-block;
   text-shadow: 1.5px 1.5px 0 rgb(0, 0, 0, 50%);
   color: #e0dfe0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   margin-top: -4px;
 }
 .btn.btn-sm {
