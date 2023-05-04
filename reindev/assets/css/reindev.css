@@ -4,6 +4,7 @@ html,
 body,
 .wrapper {
   height: 100%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
 .website-panorama {
   display: flex;
   position: fixed;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
   animation: website-panorama 120s linear infinite;
   inset: 0;
   z-index: -1;
@@ -92,14 +97,14 @@ details > summary::-webkit-details-marker {
 }
 
 details > summary::after {
-  font-family: "Font Awesome 6 Free";
+  font: var(--fa-font-solid);
   content: "\f078";
   color: #646464;
   font-size: 12px;
 }
 
 details[open] > summary::after {
-  font-family: "Font Awesome 6 Free";
+  font: var(--fa-font-solid);
   content: "\f077";
   color: #646464;
   font-size: 12px;
@@ -132,6 +137,12 @@ details[open] > summary::after {
 
   text-decoration: none;
   text-align: center;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+
+  outline: none;
 
   cursor: default;
 
@@ -175,6 +186,12 @@ details[open] > summary::after {
   height: 38px;
 }
 
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .text-decoration-none {
   text-decoration: none;
 }
@@ -183,6 +200,8 @@ details[open] > summary::after {
 }
 
 .logo-wrapper {
+  animation: logo-fade-in 1.4s;
+  animation-delay: 3s;
   position: relative;
   display: flex;
   justify-content: center;
@@ -211,10 +230,11 @@ details[open] > summary::after {
   user-select: none;
   -webkit-user-select: none;
   pointer-events: none;
+  text-align: center;
   cursor: default;
   position: absolute;
-  top: calc(100% - 70px);
-  left: calc(100% - 248px);
+  top: calc(100% - 50px);
+  left: calc(100% - 300px);
 
   font-size: 18px;
 
@@ -225,6 +245,17 @@ details[open] > summary::after {
 
   font-weight: 500;
   transform: rotate(-20deg);
+}
+
+@keyframes logo-fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 li {
@@ -277,6 +308,11 @@ li::before {
   position: relative;
   background: url("/reindev/assets/img/dirt.png");
   animation: dirt-scroll 8s linear infinite;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  cursor: default;
   background-size: 800px;
   z-index: 1200;
   display: flex;
@@ -414,9 +450,37 @@ li::before {
   margin-top: auto;
 }
 
+.title-screen-text {
+  text-shadow: 1.5px 1.5px 0 rgb(0, 0, 0, 80%);
+  user-select: none;
+  cursor: default;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.title-screen-text a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
 .main-buttons {
   display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
   gap: 8px;
+}
+
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 
 .buttons {
@@ -431,6 +495,112 @@ li::before {
   flex-direction: column;
   justify-content: end;
   gap: 8px;
+}
+
+[role="carousel"] {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+[role="carousel-content"] {
+  display: flex;
+  overflow-x: hidden;
+  width: 100%;
+  gap: 12px;
+}
+
+[role="carousel-increment"],
+[role="carousel-decrement"] {
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 26px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+[role="carousel-item"] {
+  flex-grow: 0;
+  flex-shrink: 0;
+  white-space: normal;
+  width: 320px;
+}
+
+@media screen and (max-width: 700px) {
+  [role="carousel"] {
+    flex-direction: column;
+  }
+  [role="carousel-decrement"] {
+    display: block;
+    margin-left: -40px;
+    order: 1;
+  }
+  [role="carousel-increment"] {
+    display: block;
+    margin-left: 40px;
+    margin-top: -50px;
+    order: 2;
+  }
+  [role="carousel-content"] {
+    order: 3;
+  }
+  [role="carousel-item"] {
+    width: 100%;
+  }
+}
+
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: loading 3s;
+  animation-timing-function: step-end;
+  -webkit-animation-timing-function: step-end;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  text-shadow: 2px 2px 0 rgb(0, 0, 0);
+  background: #373363;
+  z-index: 11;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+    cursor: default;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.loading-subtitle {
+  color: #928eb8;
+}
+
+.loading-title {
+  font-size: 32px;
+}
+
+.feature-description {
+  max-height: 240px;
+  overflow-y: scroll;
+}
+
+.gap-5 {
+  gap: 10px !important;
+}
+.gap-10 {
+  gap: 20px !important;
 }
 
 .h-100 {

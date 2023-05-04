@@ -13,12 +13,266 @@
     <link rel="stylesheet" href="/reindev/assets/css/reindev.css" />
   </head>
   <body>
+    <main class="loading-screen">
+      <img
+        src="https://cdn.discordapp.com/attachments/1087026342157111387/1103658133106208869/image.png"
+        width="300"
+        class="mb-5"
+      />
+      <div class="loading-subtitle">Not Affiliated With</div>
+      <div class="loading-title">Mojang Specifications</div>
+    </main>
     <main class="website-panorama">
       <div class="panorama-0"></div>
       <div class="panorama-1"></div>
       <div class="panorama-2"></div>
       <div class="panorama-3"></div>
     </main>
+    <div style="position: absolute; left: 4px; bottom: 4px">
+      <div class="title-screen-text">
+        Website created by
+        <a href="https://twitter.com/nabrious" target="_blank">Nabrious</a>.
+      </div>
+      <div class="title-screen-text">
+        Copyright ReIndev 2023. All rights reserved.
+      </div>
+      <div class="title-screen-text hide-for-large">
+        ReIndev mod created by Silveros & DasJafss.
+      </div>
+    </div>
+    <div
+      class="text-right show-for-large"
+      style="position: absolute; right: 4px; bottom: 4px"
+    >
+      <div class="title-screen-text">
+        ReIndev mod created by Silveros & DasJafss.
+      </div>
+    </div>
+    <div class="modal" id="information-modal">
+      <div class="modal-header">
+        <div class="modal-header-text">Information</div>
+      </div>
+      <div class="modal-body-wrapper">
+        <div class="modal-body">
+          <div class="mb-10">
+            <div class="mb-2 text-muted">Overview</div>
+            <div class="text-xs">
+              ReIndev is a mod for
+              <span class="text-muted">Minecraft Beta 1.7.3</span> created by
+              <span class="text-muted">Silveros</span> and
+              <span class="text-muted">DasJafss</span> that intends to bring
+              back the feelings of fun, fear, and discovery from old Minecraft.
+              ReIndev adds new blocks, items, mobs, and plenty of other new and
+              exciting features to bring back that long lost feeling of mystery.
+              ReIndev acts as more of a "fork" of Minecraft, in that it does not
+              use a mod loader.
+            </div>
+          </div>
+          <div class="mb-5 text-muted">New Features and Gameplay Additions</div>
+          <div role="carousel">
+            <button role="carousel-decrement" data-play-sound="true">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <div role="carousel-content">
+              <div role="carousel-item">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div>
+                      <div class="text-lg mb-5 text-truncate">Potions</div>
+                      <img
+                        src="/reindev/assets/img/potions.png"
+                        class="card-img-header mb-5"
+                      />
+                      <div class="feature-description">
+                        <div class="text-muted text-xs mb-10">
+                          Potions have been added to game and work similarly to
+                          how potions were originally supposed to work in
+                          Minecraft, utilizing a cauldron instead of a brewing
+                          stand. Pour in some water, chuck in some random
+                          ingredients, and you're good to go!
+                        </div>
+                        <div class="text-muted text-xs">
+                          Brewing recipes, while randomized, are always the same
+                          recipe no matter what. Regular items do not correspond
+                          to any effects and are entirely random as to what
+                          effects they can produce when combined with other
+                          ingredients. Special fish can be used as brewing
+                          ingredients to "weight" or guarantee certain effects.
+                          With the usage of special "charge" items, one can
+                          alter the type of potion created in the cauldron and
+                          create special potion types such as splash potions or
+                          the new "flash flasks" and bottled flames.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="carousel-item">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div>
+                      <div class="text-lg mb-5 text-truncate">Gears</div>
+                      <img
+                        src="/reindev/assets/img/gears.png"
+                        class="card-img-header mb-5"
+                      />
+                      <div class="feature-description">
+                        <div class="text-muted text-xs">
+                          In ReIndev, redstone, does not exist. Circuitry and
+                          power is instead handled by gears which can be placed
+                          on walls and are powered by motor blocks. Gears
+                          function practically identical to redstone and most
+                          machines can be converted to use gears. ReIndev adds
+                          many new blocks to help condense and simplify
+                          circuitry. Some new blocks used in common gear
+                          circuitry include logic gates (AND, OR, NOT, XOR),
+                          relay blocks and wait blocks.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="carousel-item">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div>
+                      <div class="text-lg mb-5 text-truncate">
+                        Cubic Chunks and Floating Islands
+                      </div>
+                      <img
+                        src="/reindev/assets/img/floatlands.png"
+                        class="card-img-header mb-5"
+                      />
+                      <div class="feature-description">
+                        <div class="text-muted text-xs mb-10">
+                          One of the most impressive features ReIndev adds.
+                          Cubic chunks are chunks that are, well, cubic! Chunks
+                          in vanilla Beta 1.7.3 are 16x128x16, but are 16^3 in
+                          ReIndev. We use this for added world depth and extra
+                          world height. The default world height in ReIndev is
+                          2048 blocks! We use this added headroom for our
+                          floating islands found at around y600 in the
+                          Overworld.
+                        </div>
+                        <div class="text-muted text-xs">
+                          The floating islands in ReIndev are certainly a site
+                          to be seen! Beautiful cherry tree forests, huge icy
+                          peaks, lush grassy fields filled with flowers galore.
+                          Atop these floating islands lives a new mob, the
+                          Wyvern, a small winged dragon that hunts at night.
+                          Wyverns will tolerate players so long as its during
+                          the daytime or one does not try to harm them. During
+                          fights, wyverns shoot elemental fireballs and like to
+                          swoop down and take bites out of their targets.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="carousel-item">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div>
+                      <div class="text-lg mb-5 text-truncate">
+                        New Biomes and World Generation
+                      </div>
+                      <img
+                        src="/reindev/assets/img/desert.png"
+                        class="card-img-header mb-5"
+                      />
+                      <div class="feature-description">
+                        <div class="text-muted text-xs mb-10">
+                          ReIndev adds many new biomes. From desolate limestone
+                          wastelands and vast quicksand deserts, to giant ice
+                          spikes and dense tropical rainforests, ReIndev adds
+                          many new locations for you to explore.
+                        </div>
+                        <div class="text-muted text-xs">
+                          World generation in ReIndev consists of various
+                          islands scattered across short stretches of water. Not
+                          happy with the island you're on? Make a boat and head
+                          in a random direction and you'll likely find something
+                          entirely different from where you started. Most biomes
+                          in ReIndev have trees to make sure that no matter
+                          where you are that you will always have an access to
+                          wood, even in deserts!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div role="carousel-item">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <div>
+                      <div class="text-lg mb-5 text-truncate">
+                        New Blocks and Smaller Features
+                      </div>
+                      <img
+                        src="/reindev/assets/img/bee.png"
+                        class="card-img-header mb-5"
+                      />
+                      <div class="feature-description">
+                        <div class="text-muted text-xs mb-10">
+                          ReIndev adds many new building blocks: basalt, stucco,
+                          limestone, colored planks, brimstone, and soul
+                          sandstone just to name a few! ReIndev also adds many
+                          utility and quality-of-life blocks and items, such as
+                          crates which act as a sort of "shulker box", the
+                          incinerator which converts organic materials into ash
+                          and coal, and the wrench which changes the direction
+                          or properties of a block.
+                        </div>
+                        <div class="text-muted text-xs">
+                          Most tools in ReIndev have a special ability or quirk
+                          to them to help them stand out and give them a unique
+                          purpose or function, or to fill niches that would
+                          otherwise be covered by enchantments. Stone tools have
+                          a "fortune" effect on certain blocks, golden tools
+                          have a "silk touch" ability, diamond tools get faster
+                          the more you use them, and molten tools (a new tool
+                          set added by ReIndev) have a "smelt touch" and "fire
+                          aspect" ability that automatically smelts blocks and
+                          inflicts fire onto mobs.
+                        </div>
+                        <div class="text-muted text-xs">
+                          ReIndev also adds some technical quality-of-life
+                          features over Beta 1.7.3 such as an improved
+                          multiplayer experience with less latency and bugs,
+                          single player commands and a creative mode with
+                          flight, a modern styled texture system, world types,
+                          and much more.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button role="carousel-increment" data-play-sound="true">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <div class="grid-x align-center">
+          <div class="cell large-3">
+            <button
+              class="btn w-100"
+              data-toggle-modal="#information-modal"
+              data-play-sound="true"
+            >
+              <span class="btn-text">Close</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal" id="download-modal">
       <div class="modal-header">
         <div class="modal-header-text">Download</div>
@@ -34,7 +288,7 @@
                     src="/reindev/assets/img/website-bg.png"
                     class="card-img-header mb-5"
                   />
-                  <a href="#" class="btn btn-sm w-100" data-play-sound>
+                  <a href="#" class="btn btn-sm w-100" data-play-sound="true">
                     <span class="btn-text">Download Latest Release</span>
                   </a>
                 </div>
@@ -44,7 +298,7 @@
                   <div>
                     <div class="text-lg mb-3">Download</div>
                     <details open class="mb-2">
-                      <summary data-play-sound>
+                      <summary data-play-sound="true">
                         <div class="text-sm">
                           ReIndev 2.8.1
                           <span class="text-xxs text-muted text-uppercase"
@@ -63,16 +317,22 @@
                           <a
                             href="#"
                             class="text-xxs text-muted text-uppercase text-decoration-none"
-                            >Click here to read the full changelog</a
-                          >
+                            ><i class="fas fa-chevron-right"></i> Click here to
+                            read the full changelog
+                            <i class="fas fa-chevron-left"></i
+                          ></a>
                         </div>
-                        <a href="#" class="btn btn-sm w-100" data-play-sound>
+                        <a
+                          href="#"
+                          class="btn btn-sm w-100"
+                          data-play-sound="true"
+                        >
                           <span class="btn-text">Download</span>
                         </a>
                       </main>
                     </details>
                     <details class="mb-2">
-                      <summary data-play-sound>
+                      <summary data-play-sound="true">
                         <div class="text-sm">ReIndev 2.8.0</div>
                       </summary>
                       <main class="menu mb-5">
@@ -86,10 +346,16 @@
                           <a
                             href="#"
                             class="text-xxs text-muted text-uppercase text-decoration-none"
-                            >Click here to read the full changelog</a
-                          >
+                            ><i class="fas fa-chevron-right"></i> Click here to
+                            read the full changelog
+                            <i class="fas fa-chevron-left"></i
+                          ></a>
                         </div>
-                        <a href="#" class="btn btn-sm w-100" data-play-sound>
+                        <a
+                          href="#"
+                          class="btn btn-sm w-100"
+                          data-play-sound="true"
+                        >
                           <span class="btn-text">Download</span>
                         </a>
                       </main>
@@ -104,9 +370,9 @@
                   <div class="text-lg mb-3">Installation Instructions</div>
                   <div class="text-sm">
                     <details class="mb-2">
-                      <summary data-play-sound>
+                      <summary data-play-sound="true">
                         <div class="text-sm">
-                          MultiMC / PrismLauncher
+                          MultiMC / Prism Launcher
                           <span class="text-xxs text-muted text-uppercase"
                             >Recommended</span
                           >
@@ -132,7 +398,7 @@
                       </main>
                     </details>
                     <details class="mb-2">
-                      <summary data-play-sound>
+                      <summary data-play-sound="true">
                         <div class="text-sm">
                           Betacraft
                           <span class="text-xxs text-muted text-uppercase"
@@ -156,7 +422,7 @@
                       </main>
                     </details>
                     <details class="mb-2">
-                      <summary data-play-sound>
+                      <summary data-play-sound="true">
                         <div class="text-sm">
                           Betacraft
                           <span class="text-xxs text-muted text-uppercase"
@@ -192,9 +458,9 @@
             <button
               class="btn w-100"
               data-toggle-modal="#download-modal"
-              data-play-sound
+              data-play-sound="true"
             >
-              <span class="btn-text">Cancel</span>
+              <span class="btn-text">Close</span>
             </button>
           </div>
         </div>
@@ -205,16 +471,24 @@
         <main class="logo-wrapper">
           <img src="/reindev/assets/img/minecraft.png" class="top-logo" />
           <img src="/reindev/assets/img/reindev.png" class="bottom-logo" />
-          <div class="splash-text show-for-large">
-            Wow, look at this cool splash!
-          </div>
+          <div class="splash-text show-for-large" id="random-pool"></div>
         </main>
         <main class="main-buttons">
           <div class="side-buttons">
-            <a href="#" class="btn btn-square" data-play-sound>
+            <a
+              href="https://discord.gg/vMx9yJ6mcX"
+              target="_blank"
+              class="btn btn-square"
+              data-play-sound="true"
+            >
               <span class="btn-text"><i class="fab fa-discord"></i></span>
             </a>
-            <a href="#" class="btn btn-square" data-play-sound>
+            <a
+              href="https://www.youtube.com/@silveros"
+              target="_blank"
+              class="btn btn-square"
+              data-play-sound="true"
+            >
               <span class="btn-text"><i class="fab fa-youtube"></i></span>
             </a>
           </div>
@@ -222,17 +496,30 @@
             <button
               class="btn w-100"
               data-toggle-modal="#download-modal"
-              data-play-sound
+              data-play-sound="true"
             >
               <span class="btn-text">Download</span>
             </button>
             <button
               class="btn w-100"
-              data-toggle-modal="#features-modal"
-              data-play-sound
+              data-toggle-modal="#information-modal"
+              data-play-sound="true"
             >
-              <span class="btn-text">Features</span>
+              <span class="btn-text">Information</span>
             </button>
+          </div>
+          <div class="side-buttons">
+            <a
+              href="https://www.reddit.com/r/reindev/"
+              target="_blank"
+              class="btn btn-square"
+              data-play-sound="true"
+            >
+              <span class="btn-text"><i class="fab fa-reddit"></i></span>
+            </a>
+            <a href="#" class="btn btn-square" data-play-sound="true">
+              <span class="btn-text"><i class="fas fa-mug-hot"></i></span>
+            </a>
           </div>
         </main>
       </main>
