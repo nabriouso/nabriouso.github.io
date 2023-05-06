@@ -132,22 +132,137 @@ document.querySelectorAll('[role="carousel"]').forEach(function (carousel) {
 });
 
 const pool = [
-  "This is a testing splash screen!",
-  "Random Splash 1",
-  "Random Splash 2",
-  "Random Splash 3",
-  "Random Splash 4",
-  "Random Splash 5",
+  "Waking up so relieved!",
+  "Based and fox-pilled!",
+  "Thousands of colors!",
+  "You look awesome!",
+  "Rock and Stone!",
+  "Dopefish lives!",
+  "50% Notch code, 50% foxes!",
+  "Now with cheesy lava!",
+  "Replaced molten cheese with blood?",
+  "Absolutely proprietary!",
+  "Sentry down!",
+  "You're valid!",
+  "Don't crack eggs, build nests!",
+  "Look mom, no head!",
+  "Past from the blast!",
+  "Out of this world!",
+  "Build taller!",
+  "Build deeper!",
+  "Build bigger!",
+  "Gears and Cogs!",
+  "Forge free!",
+  "Radical!",
+  "No more nuzzles!",
+  "The sky is *far* from the limit!",
+  "Now with more watermolne!",
+  "[input funny text here]",
+  "Astolfo!",
+  "Forklift certified!",
+  "100% dragon free... Again!",
+  "Coconut doggy!",
+  "Risugami free!",
+  "Explosive!",
+  "Flower cows!",
+  "Wyverns aren't dragons!",
+  "Camo Regrow Fortified Ceramics!",
+  "Now with actual oceans!",
+  "Putting foxes in buckets!",
+  "Putting the 'Re' in hexylresorcinol!",
+  "No longer 100% dragon free!",
+  "A wrench and a few slabs!",
+  "Botched pig code!",
+  "Tastes like 2010!",
+  "Lambda controls!",
+  "Ran by foxes!",
+  "Build up!",
+  "We didn't start the fire!",
+  "Your grandma's Minecraft, reimagined!",
+  "Entirely frogless!",
+  "Heed my words!",
+  "Build better!",
+  "Be yourself!",
+  "In case it isn't obvious, foxes aren't players.",
+  "Quasi-connectivity included!",
+  "The best part of waking up!",
+  "Egg-plenty!",
+  "100% Redstone free!",
+  "Colored crates and logic gates!",
+  "A fine addition to my collection!",
+  "All our food keeps blowing up!",
+  "Fumo? Fumo.",
+  "Refridgifreezed!",
+  "Better than Indev (probably)!",
+  "Put on the maid outfit!",
+  "Special Spaghetti Code Edition!",
+  "Merp included!",
+  "Except in Nebraska!",
+  "Recommended by 9 out of 10 dentists!",
+  "Now with 100% more denim!",
+  "Don't forget your keys!",
+  "Absolutely Dopefish-Free!",
+  "Asbestos-Flavored!",
+  "Marketplace not included!",
+  "Now with NBT!",
+  "Eye-catching 3D graphics!",
+  "Wasp marbles included!",
+  "Always here for all your fox needs!",
+  "Filled to the brim with neologisms!",
+  "Always knows your location!",
+  "Get Psyched!",
+  "Modded!",
+  "Not for browsers!",
+  "Cubic chunks!",
+  "Vulpes vulpes!",
+  "Surprisingly infinite worlds!",
+  "Not an Indev mod!",
+  "Score: &e0!",
+  "Now with furnaces!",
+  "Dungeon Parties!",
+  "Game over man, game over!",
+  "Try our sister mod, ReOutdev!",
+  "Localized entirely within your kitchen!",
+  "Cogs in the machine!",
+  "99% dragon-free!",
+  "Foxes and wasps and wyverns, oh my!",
+  "You must dye!",
+  "idspispopd!",
+  "What grinds my gears!",
+  "Incinerated!",
+  "Blue roses too!",
 ];
 
-function generateString() {
+function generatePool() {
   const randomString = pool[Math.floor(Math.random() * pool.length)];
   document.getElementById("random-pool").textContent = randomString;
 }
-document.addEventListener("DOMContentLoaded", generateString);
+document.addEventListener("DOMContentLoaded", generatePool);
 
 document.querySelectorAll("[data-play-sound='true']").forEach((button) => {
   button.addEventListener("click", () => {
     new Audio("/reindev/assets/audio/click.mp3").play();
+  });
+});
+
+const tooltip = document.createElement("div");
+tooltip.classList.add("tooltip");
+document.body.appendChild(tooltip);
+
+document.querySelectorAll(".tooltip-trigger").forEach((element) => {
+  element.addEventListener("mouseover", (e) => {
+    const tooltipText = element.getAttribute("data-tooltip-title");
+    tooltip.innerHTML = `<span class="tooltip-text">${tooltipText}</span>`;
+    tooltip.classList.add("active");
+  });
+
+  element.addEventListener("mouseout", (e) => {
+    tooltip.classList.remove("active");
+  });
+
+  element.addEventListener("mousemove", (e) => {
+    tooltip.style.transform = `translate3D(${e.clientX + 10}px, ${
+      e.clientY - 20
+    }px, 0)`;
   });
 });

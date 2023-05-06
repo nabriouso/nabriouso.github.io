@@ -22,6 +22,7 @@ body {
   -webkit-user-select: none;
   -webkit-user-drag: none;
   animation: website-panorama 120s linear infinite;
+  margin-top: -40px;
   inset: 0;
   z-index: -1;
 }
@@ -36,6 +37,14 @@ body {
   100% {
     transform: translateX(0px);
   }
+}
+
+#preload-dirt {
+  background-image: url("/bta/assets/img/dirt.png");
+  opacity: 0;
+  pointer-events: none;
+  height: 20px;
+  width: 20px;
 }
 
 .website-panorama .panorama-0::before {
@@ -162,6 +171,14 @@ details[open] > summary::after {
   height: 44px;
   width: 44px;
 }
+.btn-square .fas,
+.btn-square .far,
+.btn-square .fad,
+.btn-square .fal,
+.btn-square .fab,
+.btn-square .fat {
+  padding: 0 2px;
+}
 .btn:hover {
   background: #6e80db;
   border-top-color: #9fbef3;
@@ -174,7 +191,11 @@ details[open] > summary::after {
 }
 .btn .btn-text {
   display: inline-block;
+  justify-content: center;
+  align-items: center;
   text-shadow: 1.5px 1.5px 0 rgb(0, 0, 0, 50%);
+  height: 44px;
+  line-height: 44px;
   color: #e0dfe0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -427,6 +448,10 @@ li::before {
   font-size: 28px;
 }
 
+.mt-0 {
+  margin-top: 0 !important;
+}
+
 .mb-1 {
   margin-bottom: 2px;
 }
@@ -614,4 +639,25 @@ li::before {
   flex-grow: 1;
   padding: 0 18px;
   max-width: 520px;
+}
+
+.tooltip:not(.active) {
+  display: none;
+}
+
+.tooltip {
+  background: rgb(0, 0, 0, 60%);
+  position: absolute;
+  padding: 3px 5px;
+  padding-top: 5px;
+  transition: transform 0.0000000001s linear;
+  top: 0;
+  pointer-events: none;
+}
+
+.tooltip .tooltip-text {
+  display: block;
+  margin-top: -4px;
+  color: #ffff92;
+  text-shadow: 1.5px 1.5px 0 #3f3f25;
 }

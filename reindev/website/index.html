@@ -14,6 +14,7 @@
   </head>
   <body>
     <main class="loading-screen">
+      <main id="preload-dirt"></main>
       <img
         src="https://cdn.discordapp.com/attachments/1087026342157111387/1103658133106208869/image.png"
         width="300"
@@ -28,24 +29,28 @@
       <div class="panorama-2"></div>
       <div class="panorama-3"></div>
     </main>
-    <div style="position: absolute; left: 4px; bottom: 4px">
-      <div class="title-screen-text">
+    <div style="position: absolute; left: 4px; bottom: 4px; max-width: 99%">
+      <div class="title-screen-text text-truncate">
         Website created by
         <a href="https://twitter.com/nabrious" target="_blank">Nabrious</a>.
       </div>
-      <div class="title-screen-text">
+      <div class="title-screen-text text-truncate">
         Copyright ReIndev 2023. All rights reserved.
       </div>
-      <div class="title-screen-text hide-for-large">
-        ReIndev mod created by Silveros & DasJafss.
+      <div class="title-screen-text text-truncate hide-for-large">
+        ReIndev mod created by
+        <a href="https://twitter.com/silverosRe" target="_blank">Silveros</a> &
+        DasJafss.
       </div>
     </div>
     <div
       class="text-right show-for-large"
-      style="position: absolute; right: 4px; bottom: 4px"
+      style="position: absolute; right: 4px; bottom: 4px; max-width: 99%"
     >
-      <div class="title-screen-text">
-        ReIndev mod created by Silveros & DasJafss.
+      <div class="title-screen-text text-truncate">
+        ReIndev mod created by
+        <a href="https://twitter.com/silverosRe" target="_blank">Silveros</a> &
+        DasJafss.
       </div>
     </div>
     <div class="modal" id="information-modal">
@@ -280,7 +285,7 @@
       <div class="modal-body-wrapper">
         <div class="modal-body">
           <div class="grid-x grid-margin-x grid-margin-y align-center">
-            <div class="cell large-3">
+            <div class="cell large-3 mt-0">
               <div class="card mb-10">
                 <div class="card-body">
                   <div class="text-lg mb-5">Download Latest Release</div>
@@ -364,7 +369,7 @@
                 </div>
               </div>
             </div>
-            <div class="cell large-3">
+            <div class="cell large-3 mt-0">
               <div class="card">
                 <div class="card-body">
                   <div class="text-lg mb-3">Installation Instructions</div>
@@ -478,16 +483,18 @@
             <a
               href="https://discord.gg/vMx9yJ6mcX"
               target="_blank"
-              class="btn btn-square"
+              class="btn btn-square tooltip-trigger"
               data-play-sound="true"
+              data-tooltip-title="Discord Server"
             >
               <span class="btn-text"><i class="fab fa-discord"></i></span>
             </a>
             <a
               href="https://www.youtube.com/@silveros"
               target="_blank"
-              class="btn btn-square"
+              class="btn btn-square tooltip-trigger"
               data-play-sound="true"
+              data-tooltip-title="YouTube Channel"
             >
               <span class="btn-text"><i class="fab fa-youtube"></i></span>
             </a>
@@ -512,12 +519,18 @@
             <a
               href="https://www.reddit.com/r/reindev/"
               target="_blank"
-              class="btn btn-square"
+              class="btn btn-square tooltip-trigger"
               data-play-sound="true"
+              data-tooltip-title="Subreddit"
             >
               <span class="btn-text"><i class="fab fa-reddit"></i></span>
             </a>
-            <a href="#" class="btn btn-square" data-play-sound="true">
+            <a
+              href="https://ko-fi.com/silveros"
+              class="btn btn-square tooltip-trigger"
+              data-play-sound="true"
+              data-tooltip-title="Silveros' Ko-fi"
+            >
               <span class="btn-text"><i class="fas fa-mug-hot"></i></span>
             </a>
           </div>
