@@ -239,9 +239,13 @@ function generatePool() {
 }
 document.addEventListener("DOMContentLoaded", generatePool);
 
-document.querySelectorAll("[data-play-sound='true']").forEach((button) => {
-  button.addEventListener("click", () => {
-    new Audio("/reindev/assets/audio/click.mp3").play();
+const click_sound = new Audio("/reindev/assets/audio/click.mp3");
+click_sound.addEventListener("canplaythrough", () => {
+  document.querySelectorAll("[data-play-sound='true']").forEach((button) => {
+    button.addEventListener("click", () => {
+      click_sound.currentTime = 0;
+      click_sound.play();
+    });
   });
 });
 
